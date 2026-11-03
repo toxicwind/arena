@@ -1,0 +1,20 @@
+{
+  "lockfileVersion": 2,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "@army/arena",
+      "dependencies": {
+        "@army/gorilla": "file:../gorilla",
+        "@army/simian": "file:../simian",
+      },
+    },
+  },
+  "packages": {
+    "@army/gorilla": ["@army/gorilla@file:../gorilla", { "dependencies": { "@army/simian": "file:../simian" }, "bin": { "gorilla": "./bin/gorilla.ts" } }],
+
+    "@army/simian": ["@army/simian@file:../simian", { "bin": { "simian": "./bin/simian.ts" } }],
+
+    "@army/gorilla/@army/simian": ["@army/simian@file:../simian", { "bin": { "simian": "./bin/simian.ts" } }],
+  }
+}

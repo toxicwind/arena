@@ -1,0 +1,20 @@
+{
+  "name": "@army/arena",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "The arena — generative chaos test harness for the estate. Runs a system-under-test through randomized fault trials powered by the vendored simian (target kills) and gorilla (cell loss) primitives, and demands the invariant holds under every draw.",
+  "bin": {
+    "arena": "./bin/arena.ts"
+  },
+  "scripts": {
+    "test": "bun test",
+    "check": "bunx tsc --noEmit"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@army/simian": "file:../simian",
+    "@army/gorilla": "file:../gorilla"
+  }
+}
